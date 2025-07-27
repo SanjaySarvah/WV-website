@@ -1,0 +1,17 @@
+.service-image-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.6s ease-in-out;
+  z-index: 0;
+}
+
+.service-image-item.active {
+  z-index: 1;
+  opacity: 1 !important;
+}
+
+.service-list-item:hover {
+  background-color: #003087 !important;
+  color: #fff;
+}

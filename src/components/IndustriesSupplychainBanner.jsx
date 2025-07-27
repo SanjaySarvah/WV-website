@@ -1,0 +1,76 @@
+
+import supplychainBanner from "../assets/img/hero/supplychainBanner.png";
+const IndustriesSupplychainBanner = () => {
+  return (
+    <div>
+        <section
+      className="hero o-hidden hero-style-two pos-rel pt-140 bg_img"
+      style={{ backgroundImage: 'url(assets/img/bg/hero-bg02.jpg)' }}
+    >
+      <div className="container">
+        <div className="hero_wrap pt-40">
+          <div className="row align-items-center">
+            {/* Left Column */}
+            <div className="col-lg-6">
+              <div className="xb-hero">
+                <h1
+                  className="xb-item--title wow fadeInUp"
+                  data-wow-duration="600ms"
+                >
+                  Awe-Inspiring Supply <span>Chain Management Solutions</span>
+                </h1>
+
+                <ul
+                  className="xb-item--item list-unstyled wow fadeInUp"
+                  data-wow-delay="200ms"
+                  data-wow-duration="600ms"
+                >
+                  <li><i className="far fa-check"></i> Suppliers Catalogs Management</li>
+                  <li><i className="far fa-check"></i> Multi-warehouse management</li>
+                  <li><i className="far fa-check"></i> Delivery Service Platforms</li>
+                </ul>
+
+                <div
+                  className="xb-btn mt-60 wow fadeInUp"
+                  data-wow-delay="300ms"
+                  data-wow-duration="600ms"
+                >
+                  <a
+                    href="contact-us.html"
+                    className="thm-btn thm-btn--aso thm-btn--aso_yellow"
+                  >
+                    Book a free consultation
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column */}
+            <div className="col-lg-6">
+              <div className="hero-right_img pos-rel">
+                <img
+                  className="wow fadeInRight"
+                  data-wow-duration="600ms"
+                  src={supplychainBanner}
+                  alt="Supply Chain Management Banner"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll Down Button */}
+        <div className="banner-scroll-down active">
+          <a href="#about" className="scrollspy-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+      </div>
+      );
+    };
+    
+    export default IndustriesSupplychainBanner;

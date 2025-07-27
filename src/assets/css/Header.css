@@ -1,0 +1,80 @@
+/* Header.css - Only styles for mobile menu <1024px */
+.hamburger {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+}
+
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease-in-out;
+  z-index: 9999;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.mobile-sidebar.open {
+  left: 0;
+}
+
+.mobile-sidebar-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.mobile-nav ul li {
+  margin-bottom: 15px;
+}
+
+.mobile-nav ul li a,
+.mobile-nav ul li button {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+.mobile-submenu {
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+.mobile-submenu li {
+  margin-bottom: 8px;
+}
+
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 9998;
+}

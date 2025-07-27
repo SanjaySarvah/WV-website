@@ -1,0 +1,43 @@
+/* Fix: Removed empty ruleset */
+.cta-inner.ul_li_between {
+  flex-wrap: nowrap;
+}
+
+.card.p-40.shadow.border-0 {
+  padding: 70px !important;
+}
+
+.testimonials_tech {
+  padding: 70px !important;
+}
+
+/* ✅ Fixed media query syntax */
+@media (min-width: 1200px) {
+  .niche-tech .container {
+    width: 1320px !important;
+  }
+}
+
+.menusubtitle {
+  font-size: 13px;
+  color: #494D57;
+  font-weight: 400;
+  font-family: var(--font-body);
+  margin-top: 5px;
+}
+
+.thm-btn--aso {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  padding: 15px 20px;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 auto;
+}
