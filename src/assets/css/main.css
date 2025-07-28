@@ -9238,7 +9238,7 @@ body[data-aos-easing=ease] [data-aos] {
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
   padding: 30px 79px 30px 70px;
-  background-image: url(../img/cta/bg-img.png);
+  background-image: url(../img/cta/bg-img.png) !important;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13238,7 +13238,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
       color: var(--color-white);background-color:red !important; }
       .thm-btn--header:hover svg path {
         fill: var(--color-white); }
-  /* .thm-btn--aso {
+  .thm-btn--aso {
     font-weight: 700;
     padding: 27px 40px;
     overflow: hidden;
@@ -13251,8 +13251,8 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
-    background: var(--color-primary-two); } */
-    /* .thm-btn--aso::before {
+    background: var(--color-primary-two); }
+    .thm-btn--aso::before {
       position: absolute;
       content: '';
       z-index: -1;
@@ -13269,7 +13269,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
       -webkit-transition: 0.3s;
       -o-transition: 0.3s;
       transition: 0.3s;
-      background: var(--color-yellow); } */
+      background: var(--color-yellow); }
     .thm-btn--aso img {
       -webkit-transition: 0.3s;
       -o-transition: 0.3s;
@@ -13286,7 +13286,15 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
     background: var(--color-yellow);
     color: var(--color-heading-two); }
     .thm-btn--aso_yellow:hover {
-      color: var(--color-white); }
+      color: var(--color-white);
+      background: var(--color-primary-five);
+      transition: height 0.3s ease;
+    }
+
+
+
+
+
       .thm-btn--aso_yellow:hover::before {
         background: var(--color-primary-two); }
   .thm-btn--aso_white {
@@ -15140,4 +15148,11 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
     color: #fff; }
     .hds-footer-links li a:hover {
       text-decoration: underline; }
+
+
+      .thm-btn--aso_yellow:hover {
+        color: var(--color-white); }
+        .thm-btn--aso_yellow:hover::before {
+          background: var(--color-primary-two);
+          }
 

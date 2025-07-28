@@ -32,9 +32,9 @@ const SalesForceBanner = () => {
                   data-wow-delay="200ms"
                   data-wow-duration="600ms"
                 >
-                  <li><i className="far fa-check"></i> Integrating Salesforce with different Platforms</li>
-                  <li><i className="far fa-check"></i> Maximises your Salesforce ROI</li>
-                  <li><i className="far fa-check"></i> Result-Oriented Workflow</li>
+                  <li><i className="fa fa-check"></i> Integrating Salesforce with different Platforms</li>
+                  <li><i className="fa fa-check"></i> Maximises your Salesforce ROI</li>
+                  <li><i className="fa fa-check"></i> Result-Oriented Workflow</li>
                 </ul>
                 <div
                   className="xb-btn mt-60 wow fadeInUp"

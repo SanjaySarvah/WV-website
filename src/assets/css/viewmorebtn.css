@@ -1,7 +1,7 @@
 .thm-btn--fill_icon .xb-item--holder{
-    left: 20px !important;
+    /* left: 20px !important; */
 }
 
 .thm-btn--data:hover .xb-item--holder {
-    transform: translateX(-77%) !important;
+    /* transform: translateX(-77%) !important; */
 }

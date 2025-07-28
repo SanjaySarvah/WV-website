@@ -8,7 +8,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import testimonialImg from "../assets/img/testimonial/da-tes-img.png";
 import ixicoLogo from "../assets/img/testimonial/ixico-logo.png";
 import flowerIcon from "../assets/img/icon/flower-icon-blue.svg";
-
+import "../assets/css/main.css"
 
 const NincheTechnologiesTestimonialSection = () => {
   useEffect(() => {

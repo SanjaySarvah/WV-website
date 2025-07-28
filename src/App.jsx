@@ -14,7 +14,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Career from "./pages/Career";
-import AboutUsnincherechnologies from "./components/niche-technologies";
+// import AboutUsnincherechnologies from "./components/niche-technologies";
 
 import ServiceWebApplication from "./pages/ServiceWebApplication";
 import ServiceSalesForceDevelopment from "./pages/ServiceSalesForceDevelopment";
@@ -38,6 +38,7 @@ import Technologiesdevops from "./pages/Technologiesdevops";
 import TechnologiesDataservice from "./pages/TechnologiesDataservice";
 import TechnologiesMachineLearning from "./pages/TechnologiesMachineLearning";
 import Technologiesweb3 from "./pages/Technologiesweb3";
+import ServiceNinchetechnologies from "./pages/ServiceNinchetechnologies";
 
 const BREAKPOINT = 992; // match Bootstrap lg
 
@@ -53,6 +54,7 @@ function App() {
   }, []);
 
   return (
+
     <Router>
       {isDesktop ? <Header /> : <MobileHeader />}
 
@@ -65,7 +67,10 @@ function App() {
         <Route path="/career" element={<Career />} />
 
         {/* About niche tech */}
-        <Route path="/aboutusnichetechnologies" element={<AboutUsnincherechnologies />} />
+        {/* <Route path="/aboutusnichetechnologies" element={<AboutUsnincherechnologies />} /> */}
+
+        <Route path="/aboutusnichetechnologies" element={<ServiceNinchetechnologies />} />
+
 
         {/* Services */}
         <Route path="/servicewebapplication" element={<ServiceWebApplication />} />
@@ -96,6 +101,7 @@ function App() {
 
       <Footer />
     </Router>
+
   );
 }
 

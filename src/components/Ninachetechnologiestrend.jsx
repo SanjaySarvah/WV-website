@@ -44,10 +44,10 @@ const Ninachetechnologiestrend = () => {
   <i className="fa fa-check"></i> ERP APPLICATION
 </li>
                       <li>
-                        <i className="far fa-check"></i> E-Commerce
+                        <i className="fa fa-check"></i> E-Commerce
                       </li>
                       <li>
-                        <i className="far fa-check"></i> Healthcare
+                        <i className="fa fa-check"></i> Healthcare
                       </li>
                     </ul>
 

@@ -28,13 +28,13 @@ const ServiceCloudComputingBanner = () => {
                     data-wow-duration="600ms"
                   >
                     <li>
-                      <i className="far fa-check"></i> IT
+                      <i className="fa fa-check"></i> IT
                     </li>
                     <li>
-                      <i className="far fa-check"></i> FINANCIAL
+                      <i className="fa fa-check"></i> FINANCIAL
                     </li>
                     <li>
-                      <i className="far fa-check"></i> HEALTHCARE
+                      <i className="fa fa-check"></i> HEALTHCARE
                     </li>
                   </ul>
 

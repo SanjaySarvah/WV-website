@@ -28,13 +28,13 @@ const ServiceDigitalMarketingBanner = () => {
                   data-wow-duration="600ms"
                 >
                   <li>
-                    <i className="far fa-check"></i> Discovery & Planning
+                    <i className="fa fa-check"></i> Discovery & Planning
                   </li>
                   <li>
-                    <i className="far fa-check"></i> Keyword Research & Analysis
+                    <i className="fa fa-check"></i> Keyword Research & Analysis
                   </li>
                   <li>
-                    <i className="far fa-check"></i> Technical SEO Audit
+                    <i className="fa fa-check"></i> Technical SEO Audit
                   </li>
                 </ul>
 

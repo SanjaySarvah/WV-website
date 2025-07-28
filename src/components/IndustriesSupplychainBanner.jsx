@@ -25,9 +25,9 @@ const IndustriesSupplychainBanner = () => {
                   data-wow-delay="200ms"
                   data-wow-duration="600ms"
                 >
-                  <li><i className="far fa-check"></i> Suppliers Catalogs Management</li>
-                  <li><i className="far fa-check"></i> Multi-warehouse management</li>
-                  <li><i className="far fa-check"></i> Delivery Service Platforms</li>
+                  <li><i className="fa fa-check"></i> Suppliers Catalogs Management</li>
+                  <li><i className="fa fa-check"></i> Multi-warehouse management</li>
+                  <li><i className="fa fa-check"></i> Delivery Service Platforms</li>
                 </ul>
 
                 <div

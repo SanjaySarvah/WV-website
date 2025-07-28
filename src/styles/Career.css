@@ -665,13 +665,13 @@
 
 
 .thm-btn--aso{
-    width:3rem;
+    /* width:3rem;
     height:2rem;
     background: black;
     color: white;
     font-size: 25px;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 10px; */
     /* align-self: flex-start; */
     /* margin-bottom: 30px; */
 }

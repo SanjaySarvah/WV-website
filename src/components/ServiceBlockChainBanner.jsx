@@ -24,13 +24,13 @@ const ServiceBlockChainBanner = () => {
                   data-wow-duration="600ms"
                 >
                   <li>
-                    <i className="far fa-check"></i> Blockchain Development
+                    <i className="fa fa-check"></i> Blockchain Development
                   </li>
                   <li>
-                    <i className="far fa-check"></i> Hyperledger Development
+                    <i className="fa fa-check"></i> Hyperledger Development
                   </li>
                   <li>
-                    <i className="far fa-check"></i> Supply Chain Development
+                    <i className="fa fa-check"></i> Supply Chain Development
                   </li>
                 </ul>
 

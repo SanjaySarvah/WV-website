@@ -32,13 +32,13 @@ const MobileApplicationBanner = () => {
                   data-wow-duration="600ms"
                 >
                   <li>
-                    <i className="far fa-check"></i> Resource Planning
+                    <i className="fa fa-check"></i> Resource Planning
                   </li>
                   <li>
-                    <i className="far fa-check"></i> User Experience Structure
+                    <i className="fa fa-check"></i> User Experience Structure
                   </li>
                   <li>
-                    <i className="far fa-check"></i> Easy Deployment
+                    <i className="fa fa-check"></i> Easy Deployment
                   </li>
                 </ul>
                 <div
