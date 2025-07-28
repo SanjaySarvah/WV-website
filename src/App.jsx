@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Career from "./pages/Career";
+import ScrollToTop from "../src/components/ScrolltoTop"
 // import AboutUsnincherechnologies from "./components/niche-technologies";
 
 import ServiceWebApplication from "./pages/ServiceWebApplication";
@@ -48,6 +49,7 @@ function App() {
   );
 
   useEffect(() => {
+
     const handleResize = () => setIsDesktop(window.innerWidth >= BREAKPOINT);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -56,6 +58,7 @@ function App() {
   return (
 
     <Router>
+<ScrollToTop />
       {isDesktop ? <Header /> : <MobileHeader />}
 
       <Routes>
@@ -100,6 +103,7 @@ function App() {
       </Routes>
 
       <Footer />
+
     </Router>
 
   );
