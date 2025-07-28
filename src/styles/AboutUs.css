@@ -75,7 +75,7 @@
 
 
 /*Rotating section*/
-@keyframes rotateme {
+/* @keyframes rotateme {
   0% {
     transform: rotate(0deg);
     opacity: 1; }
@@ -89,7 +89,40 @@
   animation-name: rotateme;
   animation-duration: 12s;
   animation-iteration-count: infinite;
-  animation-timing-function: linear; }
+  animation-timing-function: linear; } */
+.experience-year .icon{
+
+  
+}
+.circle {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  animation: rotateCircle 10s linear infinite reverse; /* Anticlockwise */
+  margin: 100px auto;
+  top:-4.5rem;
+  left:2rem;
+}
+
+.circle span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0;
+  font-size: 1.5rem;
+  color:black;
+}
+
+@keyframes rotateCircle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 
 @media (min-width: 1024px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl {
@@ -111,8 +144,9 @@
     -o-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%;
-    position: absolute;
+    /* position: absolute; */
     left: 50%;
+    top:-25%;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -122,13 +156,14 @@
 }
 
 .about-img-wrap .mask-img-wrap {
-  mask-image: url('/assets/img/mask_img.png');
+  mask-image: url('../assets/img/mask_img.png');
   mask-size: 100%;
   mask-repeat: no-repeat;
   mask-position: center;
   height: 472px;
   width: 417px;
   margin: 0 auto;
+
 }
 .about-img-wrap .mask-img-wrap img {
     max-width: unset;

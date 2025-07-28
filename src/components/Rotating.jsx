@@ -1,4 +1,4 @@
-import React from 'react';
+import {useRef,useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaTrophy, FaBullseye, FaWifi } from 'react-icons/fa';
 
@@ -9,14 +9,29 @@ import aboutShape2 from '../assets/img/about_shape02.png';
 
 // RotatingText Component
 const RotatingText = ({ text }) => {
-  const chars = text.split('');
-  return (
-    <h6 className="circle rotateme">
-      {chars.map((char, index) => (
-        <span key={index} style={{ transform: `rotate(${index * 17}deg)` }}>{char}</span>
-      ))}
-    </h6>
-  );
+  const circleRef = useRef(null);
+  // const text = " CIRCULAR TEXT ROTATION ✨ ";
+  const radius = 100;
+  const angleStep = 360 / text.length;
+
+  useEffect(() => {
+    const circle = circleRef.current;
+    circle.innerHTML = ""; // Clear any existing spans
+
+    for (let i = 0; i < text.length; i++) {
+      const span = document.createElement("span");
+      span.innerText = text[i];
+      const angle = angleStep * i;
+      span.style.transform = `
+        rotate(${angle}deg)
+        translate(${radius}px)
+        rotate(90deg)
+      `;
+      circle.appendChild(span);
+    }
+  }, []);
+
+  return <div className="circle" ref={circleRef}></div>;
 };
 
 // AboutSection Component
@@ -37,9 +52,9 @@ const AboutSection = () => {
               </div>
               <div className="experience-year position-relative d-flex align-items-center mt-3">
                 <div className="icon me-2">
-                  <FaTrophy size={24} />
+                  <FaTrophy size={90} />
                 </div>
-                <div className="content">
+                <div className="content RotatingYear">
                   <RotatingText text={'Years Of - Experience 25 -'} />
                 </div>
               </div>

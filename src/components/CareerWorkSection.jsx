@@ -82,7 +82,7 @@ const CareerWorkSection = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="header-contact text-center mt-80">
+          <div className="header-contact text-center mt-80 headerCta">
             <a
               href="https://worleyventure.com/contact-us"
               className="thm-btn thm-btn--aso -btn--header-blackthm"
