@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Career from "./pages/Career";
+import ContactUs from "./pages/ContactUs";
 import ScrollToTop from "../src/components/ScrolltoTop"
 // import AboutUsnincherechnologies from "./components/niche-technologies";
 
@@ -68,6 +69,7 @@ function App() {
         {/* About & Career */}
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/career" element={<Career />} />
+        <Route path="/contact-us" element={<ContactUs />} />
 
         {/* About niche tech */}
         {/* <Route path="/aboutusnichetechnologies" element={<AboutUsnincherechnologies />} /> */}
