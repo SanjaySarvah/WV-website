@@ -21,17 +21,17 @@ const ContactUs = () => {
     e.preventDefault();
 
     fetch("https://script.google.com/macros/s/AKfycbxwz-xyay1LOfYzqVlz7aHiHlwfaA24c_wE_OWqwI3SWrfxbHxnnDuYJCSHZpieJybX1A/exec", {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      })
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    })
       .then(() => {
         alert("Thank you for your message! We will get back to you soon.");
         setFormData({ name: '', email: '', phone: '', company: '', description: '' });
       })
-      .catch(error => console.error("Error submitting form:", error));      
-      
+      .catch(error => console.error("Error submitting form:", error));
+
   };
 
   return (
@@ -136,28 +136,40 @@ const ContactUs = () => {
                 </form>
               </div>
 
-              {/* Contact Information 
+              {/* Contact Information */}
               <div className="contact-info">
                 <div className="row">
                   <div className="col-lg-4 col-md-6 mb-4 text-center">
                     <i className="bi bi-geo-alt-fill text-primary fs-1"></i>
                     <h5>Our Location</h5>
-                    <p>123 Business Street<br />City, State 12345</p>
+                    <p>2nd floor, Jayant Tech Park<br />Nandambakkam<br />Chennai 600089</p>
                   </div>
 
                   <div className="col-lg-4 col-md-6 mb-4 text-center">
                     <i className="bi bi-telephone-fill text-primary fs-1"></i>
                     <h5>Phone Number</h5>
-                    <p>+1 (555) 123-4567<br />Mon-Fri 9AM-6PM</p>
+                    <p>044 6513 4500</p>
                   </div>
 
-                  <div className="col-lg-4 col-md-6 mb-4 text-center">
+                  {/* <div className="col-lg-4 col-md-6 mb-4 text-center">
                     <i className="bi bi-envelope-fill text-primary fs-1"></i>
                     <h5>Email Address</h5>
-                    <p>info@worleyventure.com<br />support@worleyventure.com</p>
+                    <p>info@worleyventure.com</p>
+                  </div> */}
+                  <div className="col-lg-4 col-md-6 mb-4 text-center">
+                    <a
+                      href="https://mail.google.com/mail/?view=cm&fs=1&to=info@worleyventure.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ textDecoration: 'none', color: 'inherit' }}
+                    >
+                      <i className="bi bi-envelope-fill text-primary fs-1"></i>
+                      <h5>Email Address</h5>
+                      <p>info@worleyventure.com</p>
+                    </a>
                   </div>
                 </div>
-              </div>*/}
+              </div>
             </div>
           </div>
         </div>

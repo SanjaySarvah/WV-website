@@ -107,7 +107,7 @@ const ScrollingIntegrationSectionMobile = () => {
         .integration-item span {
           font-size: 12px;
           font-weight: 500;
-          color: black; /* Changed to black */
+          color: black;
           text-align: center;
         }
 
@@ -119,6 +119,77 @@ const ScrollingIntegrationSectionMobile = () => {
         @keyframes scroll-down {
           0% { transform: translateY(-50%); }
           100% { transform: translateY(0); }
+        }
+
+        /* Responsive improvements */
+        @media (max-width: 576px) {
+          .integration-container-mobile {
+            gap: 15px;
+          }
+          
+          .marquee-container {
+            width: 48%;
+            max-width: 140px;
+            height: 280px;
+          }
+          
+          .integration-item img {
+            width: 35px;
+            height: 35px;
+          }
+          
+          .integration-item span {
+            font-size: 11px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .integration-container-mobile {
+            gap: 10px;
+          }
+          
+          .marquee-container {
+            width: 50%;
+            max-width: 120px;
+            height: 260px;
+          }
+          
+          .integration-item img {
+            width: 30px;
+            height: 30px;
+          }
+          
+          .integration-item span {
+            font-size: 10px;
+          }
+          
+          .top-image-container {
+            width: 90%;
+            max-width: 180px;
+            padding: 15px;
+          }
+        }
+
+        @media (max-width: 360px) {
+          .integration-container-mobile {
+            flex-direction: column;
+            gap: 15px;
+          }
+          
+          .marquee-container {
+            width: 100%;
+            max-width: 200px;
+            height: 200px;
+          }
+          
+          .integration-item img {
+            width: 35px;
+            height: 35px;
+          }
+          
+          .integration-item span {
+            font-size: 11px;
+          }
         }
       `}</style>
 

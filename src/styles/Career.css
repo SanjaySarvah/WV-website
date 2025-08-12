@@ -1,3 +1,4 @@
+/* Career Page Title - Updated Responsive Styles */
 .page-title-box .title{
     font-weight: 700;
     font-size: 3em;
@@ -5,6 +6,7 @@
     color: #0c111d;
 }
 
+/* Legacy styles - keeping for backward compatibility but not used in new component */
 .cp-img-inner {
   display: flex;
   gap: 1rem;
@@ -23,7 +25,7 @@
 }
 
 .marquee-2 {
-  animation: scrollUp 8s linear infinite; /* offset second column for continuous loop */
+  animation: scrollUp 8s linear infinite;
 }
 
 @keyframes scrollDown {
@@ -34,6 +36,7 @@
     transform: translateY(0%);
   }
 }
+
 @keyframes scrollUp {
   0% {
     transform: translateY(0%);
@@ -51,83 +54,93 @@
   border-radius: 0.5rem;
 }
 
-/* Responsive handling */
-@media (max-width: 768px) {
-  .cp-img-inner {
-    flex-direction: column;
-    max-height: 15rem;
-    gap: 10px;
-    overflow: unset;
-  }
+/* Enhanced responsive styles for the new CareerPageTitle component */
+.career-page-title {
+  position: relative;
+  background-attachment: fixed;
+}
 
-  .cp-item{
-    width: 300%;
-    height: auto;
-    display: flex;
-    /* object-fit: cover; */
-    border-radius: 0.5rem;
-    flex-direction:row;
-    animation: scrollDownMobile 10s linear infinite;
-  }
+.career-page-title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.1) 100%);
+  z-index: 1;
+}
 
-  .marquee-2{
-    animation: scrollDownMobileRight 10s linear infinite;
+/* Enhanced responsive breakpoints */
+@media (max-width: 1400px) {
+  .career-page-title {
+    background-attachment: scroll;
   }
+}
 
-  @keyframes scrollDownMobile {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
-  @keyframes scrollDownMobileRight {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+@media (max-width: 1200px) {
+  .page-title-box .title {
+    font-size: 2.5em;
+    line-height: 60px;
   }
 }
 
 @media (max-width: 991px) {
-    .cp-img-inner {
-        max-height: 10rem;
-    }
-  .cp-item {
-    flex-direction:row;
-    animation: scrollDownMobile 10s linear infinite;
+  .page-title-box .title {
+    font-size: 2em;
+    line-height: 48px;
   }
-
-  .marquee-2{
-    animation: scrollDownMobileRight 10s linear infinite;
+  
+  /* Ensure proper spacing on tablets */
+  .career-content-wrapper {
+    padding: 0 20px;
   }
-
-  @keyframes scrollDownMobile {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
-
-  @keyframes scrollDownMobileRight {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-
-    .page-title-box .title {
-        font-size: 28px;
-        line-height: 42px;
-    }
 }
+
+@media (max-width: 768px) {
+  .page-title-box .title {
+    font-size: 1.8em;
+    line-height: 42px;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-title-box .title {
+    font-size: 1.5em;
+    line-height: 36px;
+  }
+  
+  /* Ensure smooth scrolling on mobile */
+  .career-page-title {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .career-badge {
+    background: #000;
+    color: #fff;
+  }
+  
+  .career-title {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  }
+}
+
+/* Print styles */
+@media print {
+  .career-page-title {
+    background: none !important;
+    color: #000 !important;
+  }
+  
+  .career-title {
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+}
+
 
 
 

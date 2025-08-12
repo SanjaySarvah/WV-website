@@ -26,7 +26,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="container position-relative z-2">
         <div className="row align-items-center min-vh-100 text-center text-md-start">
-          <div className="col-md-6">
+          <div className="col-lg-6 col-md-6">
             <h1 className="hero-title fw-bold mb-4">
               Transform Your Business <br /> with <span className="highlight">Reliable IT Solutions</span>
             </h1>
@@ -36,7 +36,7 @@ const HeroSection = () => {
             <GetStartedButton />
           </div>
 
-          <div className="col-md-6 mt-4 mt-md-0 text-center">
+          <div className="col-lg-6 col-md-6 mt-4 mt-md-0 text-center">
             <img src={heroImage} alt="Hero" className="img-fluid hero-img shadow-lg rounded" />
           </div>
         </div>
@@ -101,9 +101,35 @@ const HeroSection = () => {
         .hero-img {
           max-width: 100%;
           height: auto;
+          border-radius: 15px;
         }
 
-        /* Responsive */
+        /* Responsive improvements */
+        @media (max-width: 1199px) {
+          .hero-title {
+            font-size: 2.2rem;
+          }
+          
+          .hero-subtitle {
+            font-size: 1rem;
+          }
+        }
+
+        @media (max-width: 991px) {
+          .hero-title {
+            font-size: 2rem;
+          }
+          
+          .hero-subtitle {
+            font-size: 0.95rem;
+          }
+          
+          .hero-btn {
+            padding: 10px 25px;
+            font-size: 1rem;
+          }
+        }
+
         @media (max-width: 767px) {
           .hero-title {
             font-size: 1.8rem;
@@ -112,13 +138,45 @@ const HeroSection = () => {
             font-size: 1rem;
             margin: 0 auto 20px;
           }
-                .hero-section {
-          position: relative;
-          margin-top: 0px !important;
-          padding-top: 50px;
-          overflow: hidden;
+          .hero-section {
+            position: relative;
+            margin-top: 0px !important;
+            padding-top: 50px;
+            overflow: hidden;
+          }
         }
-     
+
+        @media (max-width: 576px) {
+          .hero-title {
+            font-size: 1.6rem;
+          }
+          
+          .hero-subtitle {
+            font-size: 0.9rem;
+          }
+          
+          .hero-btn {
+            padding: 8px 20px;
+            font-size: 0.9rem;
+          }
+          
+          .hero-img {
+            max-width: 90%;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .hero-title {
+            font-size: 1.4rem;
+          }
+          
+          .hero-subtitle {
+            font-size: 0.85rem;
+          }
+          
+          .hero-img {
+            max-width: 85%;
+          }
         }
       `}</style>
     </section>

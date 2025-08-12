@@ -3,7 +3,7 @@ import React from "react";
 const Footer = ({ className }) => {
   return (
     <footer
-      className={`footer bg_img footer-style-two footer-style-three pt-20 pos-rel ${className || ""}`}
+      className={`footer bg_img footer-style-two footer-style-three pt-10 pos-rel ${className || ""}`}
       style={{
         backgroundColor: "#010315",
         backgroundImage: "url(/assets/img/bg/footer_overly.png)",
@@ -18,13 +18,14 @@ const Footer = ({ className }) => {
         .footer .footer-inner {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
-          gap: 40px;
+          gap: 30px;
           text-align: left !important;
+          padding: 20px 0;
         }
 
         /* Extra gap only for Home page footer */
         .home-footer .footer-inner {
-          gap: 60px;
+          gap: 40px;
         }
 
         /* Styling Footer Titles */
@@ -33,12 +34,12 @@ const Footer = ({ className }) => {
           font-size: 18px;
           font-weight: 600;
           display: block;
-          margin-bottom: 12px;
+          margin-bottom: 10px;
         }
 
         /* Footer Links */
         .footer-widget .xb-item--holder li {
-          margin-bottom: 8px;
+          margin-bottom: 6px;
         }
         .footer-widget .xb-item--holder li a {
           color: #ccc;
@@ -80,7 +81,7 @@ const Footer = ({ className }) => {
 
         /* Copyright Section */
         .footer .copyright {
-          padding: 15px 0;
+          padding: 8px 0;
           text-align: center;
         }
         .footer .copyright p {
@@ -93,27 +94,29 @@ const Footer = ({ className }) => {
         @media (max-width: 992px) {
           .footer .footer-inner {
             grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
+            gap: 25px;
+            padding: 15px 0;
           }
           .home-footer .footer-inner {
-            gap: 40px;
+            gap: 30px;
           }
         }
 
         @media (max-width: 768px) {
           .footer .footer-inner {
             grid-template-columns: 1fr;
-            gap: 20px;
+            gap: 15px;
+            padding: 10px 0;
           }
           .home-footer .footer-inner {
-            gap: 20px;
+            gap: 15px;
           }
         }
       `}</style>
 
       <div className="container">
         <div className="xb-footer">
-          <div className="footer-inner mb-70 ul_li_between align-items-start">
+          <div className="footer-inner ul_li_between align-items-start">
             {/* Company */}
             <div className="footer-widget">
               <span className="xb-item--sub-title">Company</span>
@@ -189,7 +192,7 @@ const Footer = ({ className }) => {
             </div>
 
             {/* Newsletter */}
-            <div className="sa-newslatter footer-widget">
+            {/* <div className="sa-newslatter footer-widget">
               <span className="xb-item--sub-title">Newsletter</span>
               <p className="xb-item--content clr-white">
                 Sign up Worley Ventures for weekly updates.
@@ -223,7 +226,7 @@ const Footer = ({ className }) => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -231,8 +234,8 @@ const Footer = ({ className }) => {
       {/* Copyright */}
       <div className="copyright" style={{ backgroundColor: "#fff" }}>
         <div className="container">
-          <div className="footer-copyright mt-15 ul_li_between">
-            <p className="copyright mt-20" style={{ color: "#000" }}>
+          <div className="footer-copyright ul_li_between">
+            <p className="copyright" style={{ color: "#000", margin: "5px 0" }}>
               Copyright © {new Date().getFullYear()}{" "}
               <a href="#" style={{ color: "#000" }}>
                 Worley Ventures

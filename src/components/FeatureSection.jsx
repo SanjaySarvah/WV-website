@@ -41,9 +41,9 @@ const FeatureSection = () => {
     <section className="fanfact pt-5 pb-5">
       <div className="container">
         <div className="ap-feature_wrap">
-          <div className="row">
+          <div className="row g-4">
             {features.map((feature, index) => (
-              <div className="col-lg-3 col-md-6 mt-4" key={index}>
+              <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-4" key={index}>
                 <div
                   className="ap-feature-item wow fadeInUp"
                   data-wow-delay={feature.delay}
@@ -66,6 +66,93 @@ const FeatureSection = () => {
           </div>
         </div>
       </div>
+      
+      {/* Responsive CSS */}
+      <style jsx>{`
+        .ap-feature-item {
+          text-align: center;
+          padding: 20px;
+          transition: transform 0.3s ease;
+        }
+        
+        .ap-feature-item:hover {
+          transform: translateY(-5px);
+        }
+        
+        .xb-item--icon img {
+          width: 60px;
+          height: 60px;
+          object-fit: contain;
+        }
+        
+        .xb-item--title {
+          font-size: 1.25rem;
+          font-weight: 600;
+          margin-bottom: 10px;
+          color: #333;
+        }
+        
+        .xb-item--content {
+          font-size: 0.95rem;
+          color: #666;
+          line-height: 1.5;
+        }
+        
+        @media (max-width: 1199px) {
+          .xb-item--title {
+            font-size: 1.2rem;
+          }
+          
+          .xb-item--content {
+            font-size: 0.9rem;
+          }
+        }
+        
+        @media (max-width: 991px) {
+          .xb-item--icon img {
+            width: 55px;
+            height: 55px;
+          }
+          
+          .xb-item--title {
+            font-size: 1.15rem;
+          }
+        }
+        
+        @media (max-width: 768px) {
+          .xb-item--icon img {
+            width: 50px;
+            height: 50px;
+          }
+          
+          .xb-item--title {
+            font-size: 1.1rem;
+          }
+          
+          .xb-item--content {
+            font-size: 0.85rem;
+          }
+        }
+        
+        @media (max-width: 576px) {
+          .ap-feature-item {
+            padding: 15px;
+          }
+          
+          .xb-item--icon img {
+            width: 45px;
+            height: 45px;
+          }
+          
+          .xb-item--title {
+            font-size: 1rem;
+          }
+          
+          .xb-item--content {
+            font-size: 0.8rem;
+          }
+        }
+      `}</style>
     </section>
   );
 };

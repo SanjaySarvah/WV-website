@@ -37,7 +37,8 @@ const InfoCards = () => {
     backgroundColor: "#1c1c64",
     color: "white",
     transition: "all 0.4s ease-in-out",
-    width: "400px",
+    width: "100%",
+    maxWidth: "400px",
     height: isActive ? "500px" : "400px",
     borderRadius: "20px",
     cursor: "pointer",
@@ -63,6 +64,7 @@ const InfoCards = () => {
     flexWrap: "wrap",
     gap: "20px",
     justifyContent: "center",
+    alignItems: "stretch",
   };
 
   const titleStyle = {
@@ -99,6 +101,33 @@ const InfoCards = () => {
           );
         })}
       </div>
+      
+      {/* Responsive CSS */}
+      <style jsx>{`
+        @media (max-width: 1199px) {
+          .container-fluid {
+            padding: 0 20px;
+          }
+        }
+        
+        @media (max-width: 991px) {
+          .container-fluid {
+            padding: 0 15px;
+          }
+        }
+        
+        @media (max-width: 768px) {
+          .container-fluid {
+            padding: 0 10px;
+          }
+        }
+        
+        @media (max-width: 576px) {
+          .container-fluid {
+            padding: 0 5px;
+          }
+        }
+      `}</style>
     </div>
   );
 };
