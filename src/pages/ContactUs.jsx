@@ -136,7 +136,7 @@ const ContactUs = () => {
                 </form>
               </div>
 
-              {/* Contact Information */}
+              {/* Contact Information 
               <div className="contact-info">
                 <div className="row">
                   <div className="col-lg-4 col-md-6 mb-4 text-center">
@@ -157,7 +157,7 @@ const ContactUs = () => {
                     <p>info@worleyventure.com<br />support@worleyventure.com</p>
                   </div>
                 </div>
-              </div>
+              </div>*/}
             </div>
           </div>
         </div>

@@ -180,7 +180,7 @@ const CareerCtaSection = () => {
               accessible &amp; affordable for small &amp; medium enterprises
             </span>
             <div className="xb-btn">
-              <a href="https://worleyventure.com/contact-us" tabIndex={0}>
+              <a tabIndex={0}>
                 Book a free consultation
               </a>
             </div>

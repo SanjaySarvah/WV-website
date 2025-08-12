@@ -207,14 +207,16 @@ const MobileHeader = () => {
 
           {/* Other Pages */}
           <li>
-            <a href="https://worleyventure.com/career" onClick={closeMenu}>
+            {/* <a href="https://worleyventure.com/career" onClick={closeMenu}>
               <i className="bi bi-people me-2"></i> Career
-            </a>
+            </a> */}
+            <Link to="/career" onClick={closeMenu}><b><i className="bi bi-people me-2"></i>Career</b></Link>
           </li>
           <li>
-            <a href="https://worleyventure.com/contact-us" onClick={closeMenu}>
+            {/* <a href="https://worleyventure.com/contact-us" onClick={closeMenu}>
               <i className="bi bi-envelope me-2"></i> Contact
-            </a>
+            </a> */}
+            <Link to="/contact-us" onClick={closeMenu}><b><i className="bi bi-envelope me-2"></i>Contact Us</b></Link>
           </li>
         </ul>
       </div>

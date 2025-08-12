@@ -59,6 +59,31 @@ const Header = () => {
     setOpenSubmenu(openSubmenu === key ? null : key);
   };
 
+  // Close menu when clicking outside
+  React.useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuOpen && !event.target.closest('.mobile-sidebar') && !event.target.closest('.mobile-toggle')) {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [menuOpen]);
+
+  // Prevent body scroll when mobile menu is open
+  React.useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [menuOpen]);
+
   const renderMegaMenu = (items) => (
     <ul className="submenu">
       <li>
@@ -114,7 +139,16 @@ const Header = () => {
 
             {/* Hamburger Toggle */}
             <div className="mobile-toggle d-lg-none">
-              <button onClick={toggleMenu} className="hamburger">☰</button>
+              <button 
+                onClick={toggleMenu} 
+                className="hamburger"
+                aria-label="Toggle mobile menu"
+                aria-expanded={menuOpen}
+              >
+                <span className={`hamburger-line ${menuOpen ? 'open' : ''}`}></span>
+                <span className={`hamburger-line ${menuOpen ? 'open' : ''}`}></span>
+                <span className={`hamburger-line ${menuOpen ? 'open' : ''}`}></span>
+              </button>
             </div>
 
             {/* Desktop Menu */}
@@ -146,7 +180,7 @@ const Header = () => {
             {/* Header CTA */}
             <div className="header-contact d-none d-md-block">
               <Link to="/contact-us" className="thm-btn thm-btn--header btn-effect_1">
-                Let’s talk
+                Let's talk
               </Link>
             </div>
           </div>
@@ -156,7 +190,13 @@ const Header = () => {
       {/* Mobile Sidebar Menu */}
       <div className={`mobile-sidebar ${menuOpen ? "open" : ""}`}>
         <div className="mobile-sidebar-header">
-          <button onClick={closeMenu} className="close-btn">×</button>
+          <button 
+            onClick={closeMenu} 
+            className="close-btn"
+            aria-label="Close mobile menu"
+          >
+            ×
+          </button>
         </div>
         <nav className="mobile-nav">
           <ul>
@@ -164,7 +204,14 @@ const Header = () => {
               <Link to="/about-us" onClick={closeMenu}>About Us</Link>
             </li>
             <li>
-              <button className="submenu-toggle" onClick={() => toggleSubmenu("services")}>Services</button>
+              <button 
+                className="submenu-toggle" 
+                onClick={() => toggleSubmenu("services")}
+                aria-expanded={openSubmenu === "services"}
+              >
+                Services
+                <span className="toggle-icon">{openSubmenu === "services" ? "−" : "+"}</span>
+              </button>
               {openSubmenu === "services" && (
                 <ul className="mobile-submenu">
                   {servicesData.map((item, index) => (
@@ -176,7 +223,33 @@ const Header = () => {
               )}
             </li>
             <li>
-              <button className="submenu-toggle" onClick={() => toggleSubmenu("industries")}>Industries</button>
+              <button 
+                className="submenu-toggle" 
+                onClick={() => toggleSubmenu("technologies")}
+                aria-expanded={openSubmenu === "technologies"}
+              >
+                Technologies
+                <span className="toggle-icon">{openSubmenu === "technologies" ? "−" : "+"}</span>
+              </button>
+              {openSubmenu === "technologies" && (
+                <ul className="mobile-submenu">
+                  {technologies.map((item, index) => (
+                    <li key={`t-${index}`}>
+                      <Link to={item.link} onClick={closeMenu}>{item.title}</Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+            <li>
+              <button 
+                className="submenu-toggle" 
+                onClick={() => toggleSubmenu("industries")}
+                aria-expanded={openSubmenu === "industries"}
+              >
+                Industries
+                <span className="toggle-icon">{openSubmenu === "industries" ? "−" : "+"}</span>
+              </button>
               {openSubmenu === "industries" && (
                 <ul className="mobile-submenu">
                   {industriesData.map((item, index) => (
@@ -191,7 +264,7 @@ const Header = () => {
               <Link to="/career" onClick={closeMenu}>Career</Link>
             </li>
             <li>
-              <Link to="/contact-us" onClick={closeMenu}>Contact</Link>
+              <Link to="/contact-us" onClick={closeMenu} className="mobile-cta">Contact</Link>
             </li>
           </ul>
         </nav>

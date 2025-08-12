@@ -110,9 +110,9 @@ const CareerTeamSection = () => {
                       </div>
                     </div>
                     <div className="cp-team-btn">
-                      <a href="https://worleyventure.com/booking" className="cp-btn blue-btn">
+                      {/* <a href="https://worleyventure.com/booking" className="cp-btn blue-btn">
                         Schedule Interview <i className="fal fa-arrow-right"></i>
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>

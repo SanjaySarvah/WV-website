@@ -7,6 +7,7 @@ import tpWorkIcon04 from "../assets/img/icon/tp-work-icon04.svg";
 import tpWorkIcon05 from "../assets/img/icon/tp-work-icon05.svg";
 import tpWorkIcon06 from "../assets/img/icon/tp-work-icon06.svg";
 import smsWhiteIcon from "../assets/img/icon/sms-white-icon01.svg";
+import { Link } from "react-router-dom";
 
 const CareerWorkSection = () => {
   const items = [
@@ -83,13 +84,14 @@ const CareerWorkSection = () => {
 
           {/* CTA Button */}
           <div className="header-contact text-center mt-80 headerCta">
-            <a
+            {/* <a
               href="https://worleyventure.com/contact-us"
               className="thm-btn thm-btn--aso -btn--header-blackthm"
-            >
+            > */}
+            <Link to="/contact-us" className="thm-btn thm-btn--aso -btn--header-blackthm">
               Let’s talk
               <img src={smsWhiteIcon} alt="sms icon" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
