@@ -9,7 +9,8 @@
 }
 
 .header-logo img {
-  max-height: 40px;
+  max-height: 100px;
+      max-width: 300px !important;
   width: auto;
   object-fit: contain;
   transition: all 0.3s ease;
@@ -21,7 +22,7 @@
 /* Desktop logo sizing - larger screens */
 @media (min-width: 1200px) {
   .header-logo img {
-    max-height: 50px;
+    max-height: 200px;
   }
 }
 
@@ -33,11 +34,11 @@
 }
 
 /* Tablet logo sizing */
-@media (min-width: 768px) and (max-width: 991px) {
+/* @media (min-width: 768px) and (max-width: 991px) {
   .header-logo img {
     max-height: 40px;
   }
-}
+} */
 
 /* Mobile logo sizing */
 @media (max-width: 767px) {
@@ -47,33 +48,34 @@
 }
 
 /* Sticky header logo sizing - slightly smaller */
-.stricked-menu .header-logo img {
+/* .stricked-menu .header-logo img {
   max-height: 35px;
-}
+} */
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   .stricked-menu .header-logo img {
     max-height: 45px;
   }
-}
-
+} */
+/* 
 @media (min-width: 992px) and (max-width: 1199px) {
   .stricked-menu .header-logo img {
-    max-height: 40px;
+    max-height: 500px;
   }
-}
+} */
 
-@media (min-width: 768px) and (max-width: 991px) {
+/* @media (min-width: 768px) and (max-width: 991px) {
   .stricked-menu .header-logo img {
     max-height: 35px;
   }
-}
+} */
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .stricked-menu .header-logo img {
     max-height: 28px;
   }
-}
+  
+} */
 
 /* Ensure logos maintain aspect ratio and proper display */
 .header-logo .logo01,
@@ -179,7 +181,7 @@
 
 /* Ensure logo doesn't get cut off */
 .header-logo img {
-  max-width: 200px;
+  max-width: 500px;
 }
 
 @media (max-width: 767px) {

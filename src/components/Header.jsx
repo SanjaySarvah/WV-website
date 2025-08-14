@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo_white from "../assets/img/logo/logo-white.svg";
-import Logo_black from '../assets/img/logo/logo2.webp';
+import Logo_black from '../assets/img/logo/logo2.png';
 import "../assets/css/main.css";
 import "../assets/css/Header.css";
 
@@ -130,10 +130,10 @@ const Header = () => {
           <div className="header__wrap pd-70 ul_li_between">
                          <div className="header-logo">
                <Link to="/" className="logo01">
-                 <img src={Logo_white} alt="Forley Ventures - White Logo" />
+                 <img src={Logo_white} alt="Worley Ventures - White Logo" />
                </Link>
                <Link to="/" className="logo02">
-                 <img src={Logo_black} alt="Forley Ventures - Black Logo" />
+                 <img src={Logo_black} alt="Worley Ventures - Black Logo" />
                </Link>
              </div>
 

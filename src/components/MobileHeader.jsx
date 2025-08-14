@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import Logo_black from "../assets/img/logo/logo-black02.svg";
+import Logo_black from "../assets/img/logo/logo2.png";
 
 // Menu data with icons
 const servicesData = [
