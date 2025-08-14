@@ -7,7 +7,7 @@ const TeamSection = () => {
         <h1 className="title">Our team</h1>
 
         {/* Positioned team member images */}
-        <div className="member-img img1">
+        {/* <div className="member-img img1">
           <img src="https://worleyventure.com/assets/img/team/img01.png" alt="Member 1" />
         </div>
         <div className="member-img img2">
@@ -27,7 +27,7 @@ const TeamSection = () => {
         </div>
         <div className="member-img img7">
           <img src="https://worleyventure.com/assets/img/team/img07.png" alt="Member 7" />
-        </div>
+        </div> */}
       </div>
 
      <style jsx>{`

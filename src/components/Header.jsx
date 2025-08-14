@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo_left from "../assets/img/logo/logo-white.svg";
-import Logo_black from "../assets/img/logo/logo-black02.svg";
+import Logo_white from "../assets/img/logo/logo-white.svg";
+import Logo_black from '../assets/img/logo/logo2.webp';
 import "../assets/css/main.css";
 import "../assets/css/Header.css";
 
@@ -128,14 +128,14 @@ const Header = () => {
       <div className="xb-header stricky stricked-menu stricky-fixed original">
         <div className="container-fluid">
           <div className="header__wrap pd-70 ul_li_between">
-            <div className="header-logo">
-              <Link to="/" className="logo01">
-                <img src={Logo_left} alt="Logo White" />
-              </Link>
-              <Link to="/" className="logo02">
-                <img src={Logo_black} alt="Logo Black" />
-              </Link>
-            </div>
+                         <div className="header-logo">
+               <Link to="/" className="logo01">
+                 <img src={Logo_white} alt="Forley Ventures - White Logo" />
+               </Link>
+               <Link to="/" className="logo02">
+                 <img src={Logo_black} alt="Forley Ventures - Black Logo" />
+               </Link>
+             </div>
 
             {/* Hamburger Toggle */}
             <div className="mobile-toggle d-lg-none">

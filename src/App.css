@@ -403,10 +403,6 @@
 }
 
 @media (max-width: 767px) {
-  .header-logo img {
-    max-height: 40px;
-  }
-  
   .header-contact {
     display: none !important;
   }

@@ -1,4 +1,193 @@
 /* Header.css - Only styles for mobile menu <1024px */
+
+/* Logo Sizing Styles */
+.header-logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.header-logo img {
+  max-height: 40px;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Desktop logo sizing - larger screens */
+@media (min-width: 1200px) {
+  .header-logo img {
+    max-height: 50px;
+  }
+}
+
+/* Medium desktop logo sizing */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header-logo img {
+    max-height: 45px;
+  }
+}
+
+/* Tablet logo sizing */
+@media (min-width: 768px) and (max-width: 991px) {
+  .header-logo img {
+    max-height: 40px;
+  }
+}
+
+/* Mobile logo sizing */
+@media (max-width: 767px) {
+  .header-logo img {
+    max-height: 32px;
+  }
+}
+
+/* Sticky header logo sizing - slightly smaller */
+.stricked-menu .header-logo img {
+  max-height: 35px;
+}
+
+@media (min-width: 1200px) {
+  .stricked-menu .header-logo img {
+    max-height: 45px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .stricked-menu .header-logo img {
+    max-height: 40px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .stricked-menu .header-logo img {
+    max-height: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .stricked-menu .header-logo img {
+    max-height: 28px;
+  }
+}
+
+/* Ensure logos maintain aspect ratio and proper display */
+.header-logo .logo01,
+.header-logo .logo02 {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Ensure proper logo display in sticky header */
+.stricked-menu .header-logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* Logo container optimization */
+.header-logo a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+}
+
+/* Navbar-specific logo optimizations */
+.xb-header .header-logo {
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+/* Ensure logo doesn't interfere with menu items */
+.header__wrap .header-logo {
+  position: relative;
+  z-index: 10;
+}
+
+/* Optimize logo for different header states */
+.header-transparent .header-logo img {
+  filter: brightness(1.1);
+}
+
+/* Ensure proper spacing in sticky header */
+.stricked-menu .header__wrap .header-logo {
+  margin-right: 15px;
+}
+
+/* Mobile navbar logo adjustments */
+@media (max-width: 991px) {
+  .header-logo {
+    margin-right: 15px;
+  }
+  
+  .stricked-menu .header__wrap .header-logo {
+    margin-right: 10px;
+  }
+}
+
+/* Logo hover effects */
+.header-logo a:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.header-logo a {
+  transition: all 0.3s ease;
+}
+
+/* Ensure SVG logos render properly */
+.header-logo img[src*=".svg"] {
+  width: auto;
+  height: auto;
+}
+
+/* Ensure WebP logos render properly */
+.header-logo img[src*=".webp"] {
+  width: auto;
+  height: auto;
+}
+
+/* Navbar height optimization */
+.header__wrap {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .header__wrap {
+    min-height: 70px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__wrap {
+    min-height: 60px;
+  }
+}
+
+/* Logo vertical alignment */
+.header-logo {
+  align-self: center;
+}
+
+/* Ensure logo doesn't get cut off */
+.header-logo img {
+  max-width: 200px;
+}
+
+@media (max-width: 767px) {
+  .header-logo img {
+    max-width: 150px;
+  }
+}
+
 .hamburger {
   font-size: 28px;
   background: none;

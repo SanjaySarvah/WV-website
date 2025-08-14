@@ -1,18 +1,21 @@
 import React from 'react';
+import icon1 from '../assets/img/logo/dollar-circle.webp'
+import icon2 from '../assets/img/logo/music-play.webp'
+import icon3 from '../assets/img/logo/user-icon.webp'
 
 const features = [
   {
-    icon: 'https://worleyventure.com/assets/img/icon/user-icon.png',
+    icon: icon1,
     title: 'Expert team members',
     content: 'We take pride in assembling a diverse and highly skilled.',
   },
   {
-    icon: 'https://worleyventure.com/assets/img/icon/music-play.png',
+    icon: icon2,
     title: 'Fastest customer service',
     content: 'We pride ourselves on providing the fastest customer service industry.',
   },
   {
-    icon: 'https://worleyventure.com/assets/img/icon/dollar-circle.png',
+    icon: icon3,
     title: 'Reasonable pricing',
     content: 'We believe in providing reasonable pricing that offers exceptional.',
   },

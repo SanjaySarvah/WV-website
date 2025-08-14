@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import img from '../assets/img/gallery/img-03.webp'
 
 const cardData = [
   {
@@ -8,21 +9,21 @@ const cardData = [
     title: "About us",
     description:
       "To deliver cutting-edge IT solutions that drive business growth, boost productivity, and ensure long-term competitiveness.",
-    image: "https://worleyventure.com/assets/img/about/img-03.png",
+    image: img,
   },
   {
     id: 2,
     title: "Our mission",
     description:
       "Empowering innovation through scalable, secure, and intelligent digital solutions tailored to your unique needs.",
-    image: "https://worleyventure.com/assets/img/about/img-03.png",
+    image: img,
   },
   {
     id: 3,
     title: "Our vision",
     description:
       "To be a global leader in IT services by fostering excellence, embracing agility, and enabling digital transformation.",
-    image: "https://worleyventure.com/assets/img/about/img-03.png",
+    image: img,
   },
 ];
 
